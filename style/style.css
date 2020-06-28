@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-color: grey;
@@ -43,7 +47,8 @@ nav > a {
   color: white;
   text-decoration: none;
   padding: 0.3em 0.7em;
-  margin: 0 1em;
+  margin: 0.3em 1em;
+  text-align: center;
 }
 
 nav > a:hover {
@@ -54,9 +59,19 @@ nav > a:hover {
   #name {
     display: none;
   }
+
+  #top {
+    height: auto;
+  }
   
   nav {
     flex-basis: 100%;
     justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  nav > a {
+    flex: 30%;
   }
 }
