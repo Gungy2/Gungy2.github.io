@@ -9,12 +9,12 @@ a {
 }
 
 body {
-  height: 100%;
+
   font-family: 'Roboto', sans-serif;
   background-color: #3AAFA9;
 }
 
-/* Top */
+/* Top and Footer */
 
 #top {
   top: 0;
@@ -75,11 +75,12 @@ nav > a:hover {
 footer {
   width: 100%;
   background-color: #2B7A78;
-  flex-basis: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-top: 1px solid white;
+
+  grid-area: foot;
 }
 
 #footer-name {
@@ -101,80 +102,80 @@ footer > a > img {
 
 /* Main Section */
 
-#mainSection {
+main {
   position: absolute;
-  top: 5em;
   left: 0;
-  width: 100%;
+  width: calc(100vw - 1em);
+  display: grid;
+  gap: 3em;
+  grid-template-columns: 20px 1fr 1fr 20px;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  grid-template-areas: 
+    ".... about about ...."
+    ".... pic   intro ...."
+    ".... edu   intro ...."
+    ".... edu   work  ...."
+    ".... tech  tech  ...."
+    "foot foot  foot  foot";
+  justify-items: center;
 }
 
-h1 {
+main > section {
+  background-color: #DEF2F1;
+  border-radius: 10%;
+  
+}
+
+main > section > h2 {
+  font-size: 4em;
+  letter-spacing: 0.15em;
+  text-align: center;
+  font-style: italic;
+  text-decoration: italic;
+}
+
+main > section > article {
+  letter-spacing: 0.1em;
+  padding: 0 1em;
+  padding-bottom: 1em;
+  font-size: 2em;
+}
+
+#aboutMe {
   color: #17252A;
-  margin-top: 0.3em;
-  margin-bottom: 0.1em;
-  font-size: 10em;
+  font-size: 7em;
   font-style: italic;
   letter-spacing: 0.1em;
   text-shadow: 2px 2px #FEFFFF;
+  margin-block-start: 0.8em;
+  margin-block-end: 0.4em;
+
+  grid-area: about;
+}
+
+#picture {
+  width: 100%;
+  grid-area: pic;
+  border-radius: 30%;
+  border: 5px solid #DEF2F1;
 }
 
 #intro {
-  color: #DEF2F1;
-  font-size: 7em;
-  font-style: italic;
-  text-shadow: 2px 2px black;
-  letter-spacing: 0.1em;
-  text-align: center;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  border-bottom: -1em;
+  grid-area: intro;
 }
 
-#intro-name {
-  color: #17252A;
-  text-shadow: 2px 2px #FEFFFF;
+#education {
+  grid-area: edu;
 }
 
-#info {
-  color: #DEF2F1;
-  font-size: 3em;
-  font-style: italic;
-  text-shadow: 2px 2px black;
-  letter-spacing: 0.1em;
-  text-align: center;
-  background-color: #2B7A78;
-  padding: 0.5em 0.5em;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  border-radius: 5em;
+#work {
+  grid-area: work;
 }
 
-/* Contact */
-form {
-  display: flex;
-  width: min(100%, 50em);
-  flex-direction: column;
+#tech {
+  grid-area: tech;
 }
 
-form > * {
-  margin: 0.5em 0.5em;
-  background-color: #DEF2F1;
-  font-size: 2.5em;
-  font-family: 'Roboto', sans-serif;
-  padding: 10px;
-  border-radius: 0.6em;
-}
-
-#message {
-  resize: none;
-  font-size: 2em;
-}
 
 @media (max-width: 1200px){
   #myname::after {
@@ -185,21 +186,22 @@ form > * {
     margin: 0.3em 0.5em;
   }
 
-  h1 {
-    font-size: 8em;
-  }
-
-  #intro {
+  #aboutMe {
     font-size: 5em;
   }
 
-  #info {
-    font-size: 2em;
+  main {
+    grid-template-columns: 20px 1fr 20px;
+    grid-template-areas: 
+      ".... about ...." 
+      ".... intro ...." 
+      ".... pic   ...." 
+      ".... edu   ...." 
+      ".... work  ...." 
+      ".... tech  ...." 
+      "foot foot  foot"
   }
-
-  form > * {
-    font-size: 2em;
-  }
+  
 }
 
 @media (max-width: 700px){
@@ -223,16 +225,13 @@ form > * {
     padding: 0.5em 0.5em;
   }
 
-  #mainSection {
+  main {
     top: 5em;
   }
 
-  h1 {
-    font-size: 4em;
-    margin-top: 1em;
-  }
-
-  #intro {
-    font-size: 3em;
+  #aboutMe {
+    font-size: 5em;
+    margin-block-start: 1em;
+    margin-bottom: 0;
   }
 }
