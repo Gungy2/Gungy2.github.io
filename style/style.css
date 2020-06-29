@@ -4,32 +4,42 @@
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: grey;
+  background-color: #3AAFA9;
 }
+
+/* Top */
 
 #top {
   top: 0;
   left: 0;
   position: fixed;
-  background-color: black;
+  background-color: #2B7A78;
   width: 100%;
   height: 3.5em;
-
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  letter-spacing: 0.1em;
+  z-index: 10;
 }
 
 #name {
   padding-left: 20px;
   text-shadow: 0.08em 0.1px rgb(100, 100, 100);
   font-size: 1.6em;
-  flex-basis: 50%;
-  color: white;
+  color: #FEFFFF;
   text-decoration: none;
+}
+
+#name::after {
+  content: " Ungureanu Vrânceanu";
 }
 
 nav {
@@ -46,16 +56,128 @@ nav {
 nav > a {
   color: white;
   text-decoration: none;
-  padding: 0.3em 0.7em;
+  padding: 0.5em 0.9em;
   margin: 0.3em 1em;
   text-align: center;
+  border-radius: 0.8em;
+}
+
+nav > a[href="contact.html"] {
+  background-color: #17252A;
 }
 
 nav > a:hover {
-  background-color: grey;
+  background-color: #DEF2F1;
+  color: #17252A;
 }
 
-@media (max-width: 1000px){
+footer {
+  flex-basis: 100%;
+  width: 100%;
+  background-color: #2B7A78;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+  border-top: 1px solid white;
+}
+
+#footer-name {
+  margin-right: 30px;
+  margin-left: 20px;
+}
+
+footer > a {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  display: inline-block;
+}
+
+footer > a > img {
+  width: inherit;
+  height: inherit;
+}
+
+/* Main Section */
+
+#mainSection {
+  position: absolute;
+  top: 5em;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  color: #17252A;
+  margin-top: 0.2em;
+  margin-bottom: 0.1em;
+  font-size: 10em;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px #FEFFFF;
+}
+
+#intro {
+  color: #DEF2F1;
+  font-size: 5em;
+  font-style: italic;
+  text-shadow: 2px 2px black;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-bottom: -1em;
+}
+
+#intro-name {
+  color: #17252A;
+  text-shadow: 2px 2px #FEFFFF;
+}
+
+#info {
+  color: #DEF2F1;
+  font-size: 3em;
+  font-style: italic;
+  text-shadow: 2px 2px black;
+  letter-spacing: 0.1em;
+  text-align: center;
+  background-color: #2B7A78;
+  padding: 0.5em 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  border-radius: 5em;
+}
+
+@media (max-width: 1120px){
+  #name::after {
+    content: "";
+  }
+  nav > a {
+    padding: 0.5em 0.5em;
+    margin: 0.3em 0.5em;
+  }
+
+  h1 {
+    font-size: 8em;
+  }
+
+  #intro {
+    font-size: 6em;
+  }
+
+  #info {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 700px){
   #name {
     display: none;
   }
@@ -72,6 +194,20 @@ nav > a:hover {
   }
 
   nav > a {
-    flex: 30%;
+    flex: 35%;
+    padding: 0.5em 0.5em;
+  }
+
+  #mainSection {
+    top: 5em;
+  }
+
+  h1 {
+    font-size: 4em;
+    margin-top: 1em;
+  }
+
+  #intro {
+    font-size: 3em;
   }
 }
