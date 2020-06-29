@@ -101,7 +101,7 @@ footer > a > img {
 
 /* Main Section */
 
-#mainSection {
+main {
   position: absolute;
   top: 5em;
   left: 0;
@@ -223,7 +223,7 @@ form > * {
     padding: 0.5em 0.5em;
   }
 
-  #mainSection {
+  main {
     top: 5em;
   }
 
