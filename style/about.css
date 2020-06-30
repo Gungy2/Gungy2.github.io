@@ -123,7 +123,6 @@ main {
 main > section {
   background-color: #DEF2F1;
   border-radius: 10%;
-  
 }
 
 main > section > h2 { 
@@ -164,12 +163,23 @@ main > section > article {
   grid-area: intro;
 }
 
+#links {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+#links > a > img {
+  width: 2em;
+}
+
 #education {
   grid-area: edu;
 }
 
 #education ul {
   list-style: none;
+  padding: 0;
 }
 
 #education h3 {
@@ -207,6 +217,14 @@ main > section > article {
       ".... work  ...." 
       ".... tech  ...." 
       "foot foot  foot"
+  }
+
+  main > section {
+    border-radius: 5%;
+  }
+
+  #links > a > img {
+    width: 1.5em;
   }
   
 }
