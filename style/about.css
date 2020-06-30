@@ -200,12 +200,13 @@ main > section > article {
   display: flex;
   align-content: space-between;
   flex-wrap: wrap;
-  margin: 0;
+  padding: 0;
 }
 
 #tech li {
   flex-basis: 25%;
   text-align: center;
+  margin-bottom: 0.5em;
 }
 
 #tech img {
@@ -278,10 +279,11 @@ main > section > article {
 
   main {
     top: 5em;
+    grid-template-columns: 10px 1fr 10px;
   }
 
   #aboutMe {
-    font-size: 4em;
+    font-size: 3.5em;
     margin-block-start: 1em;
     margin-bottom: 0;
   }
@@ -297,5 +299,13 @@ main > section > article {
 
   #tech li {
     flex-basis: 100%;
+  }
+
+  main > section > h2 { 
+    font-size: 2.5em;
+  }
+  
+  main > section > article {
+    font-size: 1.5em;
   }
 }
