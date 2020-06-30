@@ -126,7 +126,7 @@ main > section {
   
 }
 
-main > section > h2 {
+main > section > h2 { 
   font-size: 4em;
   letter-spacing: 0.15em;
   text-align: center;
@@ -168,6 +168,14 @@ main > section > article {
   grid-area: edu;
 }
 
+#education ul {
+  list-style: none;
+}
+
+#education h3 {
+  text-align: center;
+}
+
 #work {
   grid-area: work;
 }
@@ -175,7 +183,6 @@ main > section > article {
 #tech {
   grid-area: tech;
 }
-
 
 @media (max-width: 1200px){
   #myname::after {
@@ -230,8 +237,17 @@ main > section > article {
   }
 
   #aboutMe {
-    font-size: 5em;
+    font-size: 4em;
     margin-block-start: 1em;
     margin-bottom: 0;
+  }
+
+  main > section > h2 {
+    font-size: 3em;
+  }
+
+  main > section > article {
+    font-size: 2em;
+    hyphens: auto;
   }
 }
