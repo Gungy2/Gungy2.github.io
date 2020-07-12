@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  letter-spacing: 0.1em;
+  font-family: 'Roboto', sans-serif;
+  background-color: #3AAFA9;
+}
+
+h1, h2, h3, h4, h5, h6, #top {
+  font-family: 'Bree Serif', serif;
+}
+
+/* Top and Footer */
+
+header {
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: #2B7A78;
+  width: 100vw;
+  height: 4em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 0.1em;
+  z-index: 10;
+  border-bottom: 1px solid white;
+}
+
+#myname {
+  padding-left: 20px;
+  text-shadow: 0.08em 0.1px rgb(100, 100, 100);
+  font-size: 1.6em;
+  color: #FEFFFF;
+  text-decoration: none;
+}
+
+#myname::after {
+  content: " Ungureanu Vrânceanu";
+}
+
+nav {
+  flex-basis: 30%;
+  font-size: 1.2em;
+  margin-right: 30px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 0.9em;
+  margin: 0.3em 1em;
+  text-align: center;
+  border-radius: 0.8em;
+}
+
+nav > a[href="contact.html"] {
+  background-color: #17252A;
+}
+
+nav > a:hover {
+  background-color: #DEF2F1;
+  color: #17252A;
+  transition: 0.2s linear;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #2B7A78;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid white;
+}
+
+#footer-name {
+  margin-right: 30px;
+  margin-left: 20px;
+}
+
+footer > a {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  display: inline-block;
+}
+
+footer > a > img {
+  width: inherit;
+  height: inherit;
+}
+
+/* Main */
+
+main {
+
+  padding-top: 3em;
+  margin: auto;
+  width: 90%;
+  text-align: center;
+}
+
+h1 {
+  color: #17252A;
+  margin-top: 0.3em;
+  margin-bottom: 0.1em;
+  font-size: 10em;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px #FEFFFF;
+}
+
+h2 {
+  color: #DEF2F1;
+  font-size: 4em;
+  font-style: italic;
+  text-shadow: 2px 2px black;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-top: 0.5em;
+}
+
+main > section {
+  text-align: left;
+  margin: 0 auto 3em;
+  background-color: #DEF2F1;
+  border-radius: 3em;
+}
+
+main > section > h3 {
+  text-align: center;
+  margin: 0;
+  padding: 0.5em;
+  font-size: 7em;
+  font-style: italic;
+}
+
+main > section > article {
+  font-size: 2em;
+  padding: 0 2em 0;
+}
+
+main > section > article > p {
+  margin: 0;
+}
+
+.main-list > li {
+  padding: 0.2em;
+}
+
+.techs {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.techs > li {
+  margin: 0.2em 1em 0.2em;
+}
+
+.demo {
+  display: block;
+  margin: auto;
+  padding-bottom: 2em;
+  width: 90%;
+  border-radius: 2em;
+}
+
+.web::before {
+  content: "https://gungy2.github.io/";
+}
+
+.repo::before {
+  content: "https://github.com/";
+}
+
+
+@media (max-width: 1200px){
+  #myname::after {
+    content: "";
+  }
+  nav > a {
+    padding: 0.5em 0.5em;
+    margin: 0.3em 0.5em;
+  }
+
+  h1 {
+    font-size: 8em;
+  }
+
+  h2 {
+    font-size: 3em;
+  }
+
+  main > section > h3 {
+    font-size: 6em;
+  }
+  
+  main > section > article {
+    font-size: 2em;
+  }
+
+  .web::before {
+    content: "";
+  }
+  
+  .repo::before {
+    content: "";
+  }
+}
+
+@media (max-width: 700px){
+  #myname {
+    display: none;
+  }
+
+  #top {
+    height: auto;
+  }
+  
+  nav {
+    flex-basis: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  nav > a {
+    flex: 35%;
+    padding: 0.5em 0.5em;
+  }
+
+  h1 {
+    font-size: 4em;
+    margin-top: 1.5em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  main > section > h3 {
+    font-size: 4em;
+  }
+  
+  main > section > article {
+    font-size: 1.3em;
+    padding: 0 1.2em 0;
+  }
+
+  main > section > article a {
+    hyphens: auto;
+  }
+}

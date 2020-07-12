@@ -108,11 +108,9 @@ footer > a > img {
 main {
   position: absolute;
   left: 0;
-  width: calc(100vw - 1em);
   display: grid;
-  gap: 3em;
+  gap: 4em;
   grid-template-columns: 20px 1fr 1fr 20px;
-
   grid-template-areas: 
     ".... about about ...."
     ".... pic   intro ...."
@@ -124,14 +122,14 @@ main {
 }
 
 main > section {
+  text-align: center;
   background-color: #DEF2F1;
-  border-radius: 10%;
+  border-radius: 3em;
 }
 
 main > section > h2 { 
   font-size: 4em;
   letter-spacing: 0.15em;
-  text-align: center;
   font-style: italic;
   text-decoration: italic;
 }
@@ -145,7 +143,7 @@ main > section > article {
 
 #aboutMe {
   color: #17252A;
-  font-size: 7em;
+  font-size: 9em;
   font-style: italic;
   letter-spacing: 0.1em;
   text-shadow: 2px 2px #FEFFFF;
@@ -158,7 +156,7 @@ main > section > article {
 #picture {
   width: 100%;
   grid-area: pic;
-  border-radius: 30%;
+  border-radius: 20%;
   border: 5px solid #DEF2F1;
 }
 
@@ -244,7 +242,7 @@ main > section > article {
   }
 
   main > section {
-    border-radius: 5%;
+    border-radius: 2em;
   }
 
   #links > a > img {
@@ -282,6 +280,7 @@ main > section > article {
   }
 
   main {
+    gap: 2em;
     top: 5em;
     grid-template-columns: 10px 1fr 10px;
   }
