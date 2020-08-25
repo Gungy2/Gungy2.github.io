@@ -12,7 +12,13 @@ body {
   background-color: #3AAFA9;
 }
 
-h1, h2, h3, h4, h5, h6, #top {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#top {
   font-family: 'Bree Serif', serif;
 }
 
@@ -57,7 +63,7 @@ nav {
   justify-content: space-between;
 }
 
-nav > a {
+nav>a {
   color: white;
   text-decoration: none;
   padding: 0.5em 0.9em;
@@ -66,11 +72,11 @@ nav > a {
   border-radius: 0.8em;
 }
 
-nav > a[href="contact.html"] {
+nav>a[href="contact.html"] {
   background-color: #17252A;
 }
 
-nav > a:hover {
+nav>a:hover {
   background-color: #DEF2F1;
   color: #17252A;
   transition: 0.2s linear;
@@ -92,14 +98,14 @@ footer {
   margin-left: 20px;
 }
 
-footer > a {
+footer>a {
   width: 40px;
   height: 40px;
   margin: 10px;
   display: inline-block;
 }
 
-footer > a > img {
+footer>a>img {
   width: inherit;
   height: inherit;
 }
@@ -136,14 +142,14 @@ h2 {
   margin-top: 0.5em;
 }
 
-main > section {
+main>section {
   text-align: left;
   margin: 0 auto 3em;
   background-color: #DEF2F1;
   border-radius: 3em;
 }
 
-main > section > h3 {
+main>section>h3 {
   text-align: center;
   margin: 0;
   padding: 0.5em;
@@ -151,16 +157,16 @@ main > section > h3 {
   font-style: italic;
 }
 
-main > section > article {
+main>section>article {
   font-size: 2em;
   padding: 0 2em 0;
 }
 
-main > section > article > p {
+main>section>article>p {
   margin: 0;
 }
 
-.main-list > li {
+.main-list>li {
   padding: 0.2em;
 }
 
@@ -170,7 +176,7 @@ main > section > article > p {
   justify-content: space-between;
 }
 
-.techs > li {
+.techs>li {
   margin: 0.2em 1em 0.2em;
 }
 
@@ -191,11 +197,12 @@ main > section > article > p {
 }
 
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
   #myname::after {
     content: "";
   }
-  nav > a {
+
+  nav>a {
     padding: 0.5em 0.5em;
     margin: 0.3em 0.5em;
   }
@@ -208,24 +215,24 @@ main > section > article > p {
     font-size: 3em;
   }
 
-  main > section > h3 {
+  main>section>h3 {
     font-size: 6em;
   }
-  
-  main > section > article {
+
+  main>section>article {
     font-size: 2em;
   }
 
   .web::before {
     content: "";
   }
-  
+
   .repo::before {
     content: "";
   }
 }
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
   #myname {
     display: none;
   }
@@ -233,7 +240,7 @@ main > section > article > p {
   #top {
     height: auto;
   }
-  
+
   nav {
     flex-basis: 100%;
     justify-content: center;
@@ -241,7 +248,7 @@ main > section > article > p {
     justify-content: space-evenly;
   }
 
-  nav > a {
+  nav>a {
     flex: 35%;
     padding: 0.5em 0.5em;
   }
@@ -255,16 +262,16 @@ main > section > article > p {
     font-size: 2em;
   }
 
-  main > section > h3 {
+  main>section>h3 {
     font-size: 4em;
   }
-  
-  main > section > article {
+
+  main>section>article {
     font-size: 1.3em;
     padding: 0 1.2em 0;
   }
 
-  main > section > article a {
+  main>section>article a {
     hyphens: auto;
   }
 }

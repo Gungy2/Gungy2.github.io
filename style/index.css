@@ -12,7 +12,13 @@ body {
   background-color: #3AAFA9;
 }
 
-h1, h2, h3, h4, h5, h6, #top {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#top {
   font-family: 'Bree Serif', serif;
 }
 
@@ -57,7 +63,7 @@ nav {
   justify-content: space-between;
 }
 
-nav > a {
+nav>a {
   color: white;
   text-decoration: none;
   padding: 0.5em 0.9em;
@@ -66,11 +72,11 @@ nav > a {
   border-radius: 0.8em;
 }
 
-nav > a[href="contact.html"] {
+nav>a[href="contact.html"] {
   background-color: #17252A;
 }
 
-nav > a:hover {
+nav>a:hover {
   background-color: #DEF2F1;
   color: #17252A;
   transition: 0.2s linear;
@@ -91,14 +97,14 @@ footer {
   margin-left: 20px;
 }
 
-footer > a {
+footer>a {
   width: 40px;
   height: 40px;
   margin: 10px;
   display: inline-block;
 }
 
-footer > a > img {
+footer>a>img {
   width: inherit;
   height: inherit;
 }
@@ -167,7 +173,7 @@ form {
   flex-direction: column;
 }
 
-form > * {
+form>* {
   margin: 0.5em 0.5em;
   background-color: #DEF2F1;
   font-size: 2.5em;
@@ -176,7 +182,7 @@ form > * {
   border-radius: 0.6em;
 }
 
-form > button {
+form>button {
   margin-bottom: 2em;
 }
 
@@ -185,11 +191,12 @@ form > button {
   font-size: 2em;
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
   #myname::after {
     content: "";
   }
-  nav > a {
+
+  nav>a {
     padding: 0.5em 0.5em;
     margin: 0.3em 0.5em;
   }
@@ -206,12 +213,12 @@ form > button {
     font-size: 2em;
   }
 
-  form > * {
+  form>* {
     font-size: 2em;
   }
 }
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
   #myname {
     display: none;
   }
@@ -219,7 +226,7 @@ form > button {
   #top {
     height: auto;
   }
-  
+
   nav {
     flex-basis: 100%;
     justify-content: center;
@@ -227,7 +234,7 @@ form > button {
     justify-content: space-evenly;
   }
 
-  nav > a {
+  nav>a {
     flex: 35%;
     padding: 0.5em 0.5em;
   }
